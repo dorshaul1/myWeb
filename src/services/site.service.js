@@ -21,7 +21,9 @@ const sites = [{
     "cmps": [
         {
             "id": "wc02",
-            "type": "wap-header",
+            "type": "w-header",
+            // "m-":
+            "s-type":"sdv",
             "info": {
                 "title": "HairDresser Baluta",
                 "substitle": "Your Hair is !(Who you Are)",
@@ -34,7 +36,7 @@ const sites = [{
         },
         {
             "id": "wc01",
-            "type": "wap-map",
+            "type": "w-map",
             "info": {
                 "name": "Paris",
                 "lat": 12.909,
@@ -49,7 +51,7 @@ const sites = [{
         },
         {
             "id": "wc03",
-            "type": "wap-container",
+            "type": "w-container",
             "info": {
                 "dir": "column",
                 "cmps": [

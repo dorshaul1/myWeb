@@ -1,0 +1,1 @@
+export { MainDynamic } from './MainDynamic'
