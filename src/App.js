@@ -1,21 +1,27 @@
-import {HashRouter as Router, Route, Switch, Link } from 'react-router-dom';
+import { useState } from 'react';
+import { useSelector } from 'react-redux';
+import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 import { AppHeader } from './cmps/AppHeader/AppHeader';
 import './style/App.scss';
-import { ContactDetailsPage } from './views/ContactDetailsPage/ContactDetailsPage';
-import { ContactEditPage } from './views/ContactEditPage/ContactEditPage';
-import { ContactPage } from './views/ContactPage/ContactPage';
 import { HomePage } from './views/HomePage/HomePage';
+import { Site } from './views/Site/Site';
+import { SiteEdit } from './views/SiteEdit/SiteEdit';
+import { TemplatesPage } from './views/TemplatesPage';
 
 function App() {
+  // const [state, setstate] = useState(initialState)
+ const state = useSelector(state => state.siteReducer)
+
   return (
-    <div className="App">
+    <div className="App ">
       <Router>
-      <AppHeader />
+      {!state.isPreview && <AppHeader />}
+        {/* {JSON.stringify(state)} */}
         <Switch>
           {/* <HomePage /> */}
-          <Route component={ContactEditPage} path="/edit/:contactId?" />
-          <Route component={ContactDetailsPage} path="/detalis/:contactId" />
-          <Route component={ContactPage} path="/contact" />
+          <Route component={Site} path="/site/:siteId" />
+          <Route component={SiteEdit} path="/siteEdit/:siteId" />
+          <Route component={TemplatesPage} path="/templates" />
           <Route component={HomePage} path="/" />
         </Switch>
       </Router>

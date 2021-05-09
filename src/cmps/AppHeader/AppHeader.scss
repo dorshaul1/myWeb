@@ -1,33 +1,36 @@
 .app-header {
-    background-color: #222222;
+    // background-color: #222222;
+    background-color: rgb(243, 243, 243);
+
     padding-bottom: 10px;
     padding: 0 80px;
     height: 60px;
-    color: rgba(240, 240, 240, 0.952);
-    
-    
-    .logo{
-        img{
+    flex: 1;
+    color: #222222;
+
+    .logo {
+        img {
             width: 30px;
-        margin-right: 10PX;
+            margin-right: 10px;
         }
-        h1{
-            text-transform: uppercase;
+        h1 {
+            // text-transform: uppercase;
             font-size: 1.5rem;
-            color: rgba(240, 240, 240, 0.952);
+            // color: rgba(240, 240, 240, 0.952);
+            // color: #222222;
         }
     }
-    
-    ul{
+
+    ul {
         margin: 0;
-        >*{
+        > * {
             text-decoration: none;
-            color: white;
+            // color: white;
             opacity: 0.7;
             margin-left: 50px;
         }
-        .active{
-            opacity: 1
+        .active {
+            opacity: 1;
         }
     }
 }
