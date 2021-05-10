@@ -1,0 +1,1 @@
+export { WText } from './WText'

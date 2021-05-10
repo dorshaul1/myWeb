@@ -1,0 +1,1 @@
+export { WFooter } from './WFooter'

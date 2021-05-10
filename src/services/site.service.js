@@ -5,7 +5,8 @@ export default {
     getSiteById,
     remove,
     saveSite,
-    getEmptySite
+    getEmptySite,
+    changeProperty
 }
 
 const sites = [{
@@ -18,13 +19,17 @@ const sites = [{
         "_id": "5e26e0b718a0891d4c995527",
         "username": "Hetro Sekshual"
     },
+    "style": {
+        "padding": "10px",
+        "textAlign": "left"
+    },
     "cmps": [
         {
             "id": "wc02",
             "type": "w-header",
-            // "m-":
-            "s-type":"sdv",
+            "SType": "header-basic",
             "info": {
+                // ""
                 "title": "HairDresser Baluta",
                 "substitle": "Your Hair is !(Who you Are)",
                 "btn": { "label": "Schedule Today!", "link": "#wc03" }
@@ -37,6 +42,7 @@ const sites = [{
         {
             "id": "wc01",
             "type": "w-map",
+            "SType": "map-basic",
             "info": {
                 "name": "Paris",
                 "lat": 12.909,
@@ -51,15 +57,21 @@ const sites = [{
         },
         {
             "id": "wc03",
-            "type": "w-container",
+            "type": "w-text",
+            "SType": "text-basic",
             "info": {
-                "dir": "column",
-                "cmps": [
-                    {},
-                    {}
-                ]
+                "h1": {
+                    "txt": "column",
+                    "style": { "color": "red" },
+                },
+                "p": {
+                    "txt": "column",
+                    "style": { "color": "blue" },
+                }
             },
             "style": {
+                // "color":"red",
+
             }
         }
     ]
@@ -78,8 +90,8 @@ const sites = [{
 //     })
 //   }
 
-function query(filterBy = null) {
-    return new Promise((resolve, reject) => {
+function query() {
+    return new Promise((resolve) => {
         var sitesToReturn = [...sites];
         // if (filterBy && filterBy.name) {
         //     sitesToReturn = filter(filterBy.name)
@@ -97,7 +109,7 @@ function getSiteById(id) {
 }
 
 function remove(id) {
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve) => {
         const index = sites.findIndex(site => site._id === id)
         if (index !== -1) {
             sites.splice(index, 1)
@@ -108,7 +120,7 @@ function remove(id) {
 }
 
 function _updateSite(site) {
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve) => {
         const index = sites.findIndex(c => site._id === c._id)
         if (index !== -1) {
             sites[index] = site
@@ -118,7 +130,7 @@ function _updateSite(site) {
 }
 
 function _addSite(site) {
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve) => {
         site._id = _makeId()
         sites.push(site)
         resolve(site)
@@ -136,6 +148,13 @@ function getEmptySite() {
         phone: ''
     }
 }
+
+async function changeProperty(site, cmpId, value, name) {
+    let cmpIdx = site.cmps.findIndex((c) => c.id === cmpId)
+    site.cmps[cmpIdx].info[name].txt = value
+    return site
+}
+
 
 // function filter(term) {
 //     term = term.toLocaleLowerCase()
