@@ -40,6 +40,12 @@ export function siteReducer(state = INITIAL_STATE, action) {
         ...state,
         isPreview: !state.isPreview
       }
+    case 'CHANGE_PROPERTY':
+      const { newSite } = action
+      return {
+        ...state,
+        currSite: newSite
+      }
     default:
       return state
   }

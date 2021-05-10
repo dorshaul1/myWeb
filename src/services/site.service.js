@@ -1,8 +1,8 @@
-// import { site } from '../data/site'
-
+/* eslint import/no-anonymous-default-export: [2, {"allowObject": true}] */
 export default {
     query,
     getSiteById,
+    getSiteIdxById,
     remove,
     saveSite,
     getEmptySite,
@@ -77,26 +77,9 @@ const sites = [{
     ]
 }]
 
-// function sort(arr) {
-//     return arr.sort((a, b) => {
-//       if (a.name.toLocaleLowerCase() < b.name.toLocaleLowerCase()) {
-//         return -1;
-//       }
-//       if (a.name.toLocaleLowerCase() > b.name.toLocaleLowerCase()) {
-//         return 1;
-//       }
-
-//       return 0;
-//     })
-//   }
-
 function query() {
     return new Promise((resolve) => {
         var sitesToReturn = [...sites];
-        // if (filterBy && filterBy.name) {
-        //     sitesToReturn = filter(filterBy.name)
-        // }
-        // resolve(sort(sitesToReturn))
         resolve(sitesToReturn)
     })
 }
@@ -104,6 +87,12 @@ function query() {
 function getSiteById(id) {
     return new Promise((resolve, reject) => {
         const site = sites.find(site => site._id === id)
+        site ? resolve(site) : reject(`Site id ${id} not found!`)
+    })
+}
+function getSiteIdxById(id) {
+    return new Promise((resolve, reject) => {
+        const site = sites.findIndex(site => site._id === id)
         site ? resolve(site) : reject(`Site id ${id} not found!`)
     })
 }
@@ -149,21 +138,11 @@ function getEmptySite() {
     }
 }
 
-async function changeProperty(site, cmpId, value, name) {
+async function changeProperty(site, cmpId, value, name, property) {
     let cmpIdx = site.cmps.findIndex((c) => c.id === cmpId)
-    site.cmps[cmpIdx].info[name].txt = value
+    site.cmps[cmpIdx].info[name][property] = value
     return site
 }
-
-
-// function filter(term) {
-//     term = term.toLocaleLowerCase()
-//     return sites.filter(site => {
-//         return site.name.toLocaleLowerCase().includes(term) ||
-//             site.phone.toLocaleLowerCase().includes(term) ||
-//             site.email.toLocaleLowerCase().includes(term)
-//     })
-// }
 
 function _makeId(length = 10) {
     var txt = ''

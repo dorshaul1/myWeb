@@ -1,39 +1,46 @@
-
-
 import { useEffect, useState } from 'react'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { MainDynamic } from '../../cmps/MainDynamic/MainDynamic'
 import siteService from '../../services/site.service'
-import { togglePreview } from '../../store/actions/siteAction'
+import { getSiteById, togglePreview } from '../../store/actions/siteAction'
 import './Site.scss'
 
 export const Site = (props) => {
     const dispatch = useDispatch()
+    const state = useSelector(state => state.siteReducer)
     const [site, setSite] = useState(null)
 
     useEffect(() => {
         loadSite()
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [props.match.params.siteId])
-
+    
+    
     useEffect(() => {
         dispatch(togglePreview())
         return () => {
             dispatch(togglePreview())
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
+    
     const loadSite = async () => {
-        let site = await siteService.getSiteById(props.match.params.siteId)
-        setSite(site)
+        dispatch(getSiteById(props.match.params.siteId))
+        // let currSite = state.currSite
+        // console.log('state:', state)
+        let currSite = await siteService.getSiteById(props.match.params.siteId)
+        setSite(currSite)
+        console.log('site:', site)
     }
 
-    const onSetValue=async (ev,cmpId)=>{
-        const value =  ev.target.innerText
+    const onSetValue = async (ev) => {
+        const value = ev.target.innerText
         const elName = ev.target.getAttribute("name")
-        const updatedSite = await siteService.changeProperty(site, cmpId, value, elName)
+        const cmpId = ev.target.getAttribute("id")
+        const updatedSite = await siteService.changeProperty(site, cmpId, value, elName, "txt")
         setSite(updatedSite)
-        console.log(site);
-        // console.log('elName:', elName)
+        console.log(site.cmps);
     }
 
     return (
