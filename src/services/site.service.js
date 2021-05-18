@@ -51,12 +51,12 @@ const sites = [{
             "SType": "map-basic",
             "info": {
                 "name": "Paris",
-                "lat": 12.909,
-                "lng": 23.9,
-                "zoom": 2
+                "lat": 32.109333,
+                "lng": 34.855499,
+                "zoom": 5
             },
             "style": {
-                "backgroundColor": "#f53b76",
+                "backgroundColor": "#9fd0f1",
                 "height": "300px",
                 "padding": "10px"
             }
