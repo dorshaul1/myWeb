@@ -30,9 +30,15 @@ const sites = [{
             "SType": "header-basic",
             "info": {
                 // ""
-                "title": "HairDresser Baluta",
-                "substitle": "Your Hair is !(Who you Are)",
-                "btn": { "label": "Schedule Today!", "link": "#wc03" }
+                "title": {
+                    "txt": "HairDresser Baluta",
+                    "style": { "color": "blue" },
+                },
+                "substitle": {
+                    "txt":"Your Hair is !(Who you Are)",
+                    "style": { "color": "red" },
+                },
+                "btn": { "label": "Schedule Today!", "link": "#wc03" ,"style": { "color": "red" } }
             },
             "style": {
                 "background": "url()",
