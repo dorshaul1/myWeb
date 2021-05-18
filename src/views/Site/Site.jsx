@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { MainDynamic } from '../../cmps/MainDynamic/MainDynamic'
-import siteService from '../../services/site.service'
+// import siteService from '../../services/site.service'
 import { changeProperty, getSiteById, togglePreview } from '../../store/actions/siteAction'
 import './Site.scss'
 
@@ -32,8 +32,8 @@ export const Site = (props) => {
         // console.log('state:', state)
          dispatch(getSiteById(props.match.params.siteId))
         setSite(state.currSite)
-        console.log('site:', site)
-        console.log('site:', state.currSite)
+        // console.log('site:', site)
+        // console.log('site:', state.currSite)
     }
 
     const onSetValue = async (ev) => {
@@ -45,8 +45,8 @@ export const Site = (props) => {
 
     return (
         site && <div className="site" style={site.style}>
-            <h1 >site</h1>
-            {site && site.cmps.map((cmp) => <MainDynamic onSetValue={onSetValue} key={cmp.id} cmp={cmp} />)}
+            {/* <h1 >site</h1> */}
+            {site && site.cmps.map((cmp) => <MainDynamic onSetValue={onSetValue} key={cmp.id} cmp={cmp} siteId={site._id} />)}
         </div>
     )
 }
