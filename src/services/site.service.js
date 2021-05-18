@@ -35,10 +35,10 @@ const sites = [{
                     "style": { "color": "blue" },
                 },
                 "substitle": {
-                    "txt":"Your Hair is !(Who you Are)",
+                    "txt": "Your Hair is !(Who you Are)",
                     "style": { "color": "red" },
                 },
-                "btn": { "label": "Schedule Today!", "link": "#wc03" ,"style": { "color": "red" } }
+                "btn": { "label": "Schedule Today!", "link": "#wc03", "style": { "color": "red" } }
             },
             "style": {
                 "background": "url()",
