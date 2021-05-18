@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { MainDynamic } from '../../cmps/MainDynamic/MainDynamic'
 import siteService from '../../services/site.service'
-import { getSiteById, togglePreview } from '../../store/actions/siteAction'
+import { changeProperty, getSiteById, togglePreview } from '../../store/actions/siteAction'
 import './Site.scss'
 
 export const Site = (props) => {
@@ -11,9 +11,10 @@ export const Site = (props) => {
     const [site, setSite] = useState(null)
 
     useEffect(() => {
+        setSite(state.currSite)
         loadSite()
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [props.match.params.siteId])
+    }, [props.match.params.siteId, state.currSite])
     
     
     useEffect(() => {
@@ -29,18 +30,17 @@ export const Site = (props) => {
         dispatch(getSiteById(props.match.params.siteId))
         // let currSite = state.currSite
         // console.log('state:', state)
-        let currSite = await siteService.getSiteById(props.match.params.siteId)
-        setSite(currSite)
+         dispatch(getSiteById(props.match.params.siteId))
+        setSite(state.currSite)
         console.log('site:', site)
+        console.log('site:', state.currSite)
     }
 
     const onSetValue = async (ev) => {
         const value = ev.target.innerText
         const elName = ev.target.getAttribute("name")
         const cmpId = ev.target.getAttribute("id")
-        const updatedSite = await siteService.changeProperty(site, cmpId, value, elName, "txt")
-        setSite(updatedSite)
-        console.log(site.cmps);
+        dispatch(changeProperty(site, cmpId, value, elName, "txt"))
     }
 
     return (
