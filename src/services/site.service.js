@@ -32,17 +32,18 @@ const sites = [{
                 // ""
                 "title": {
                     "txt": "HairDresser Baluta",
-                    "style": { "color": "blue" },
+                    "style": { "color": "black" },
                 },
                 "substitle": {
                     "txt": "Your Hair is !(Who you Are)",
-                    "style": { "color": "red" },
+                    "style": { "color": "grey" },
                 },
-                "btn": { "label": "Schedule Today!", "link": "#wc03", "style": { "color": "red" } }
+                "btn": { "label": "Schedule Today!", "link": "#wc03", "style": { "color": "black", "backgroundColor":"transparent", "padding":"10px","borderRadius":"20px"} }
             },
             "style": {
-                "background": "url()",
-                "padding": "10px"
+                "backgroundImage": "../../../assets/images/backgroundImages/galaxy.png",
+                "padding": "10px",
+                "textAlign": "center"
             }
         },
         {
