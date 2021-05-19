@@ -41,9 +41,9 @@ const sites = [{
                 "btn": { "label": "Schedule Today!", "link": "#wc03", "style": { "color": "black", "backgroundColor":"transparent", "padding":"10px","borderRadius":"20px"} }
             },
             "style": {
-            //    " background-image": "url(../../../assets/images/backgroundImages/galaxy.png)",
-
-                "backgroundImage": "../../../assets/images/backgroundImages/galaxy.png",
+                //    " background-image": "url(../../../assets/images/backgroundImages/galaxy.png)",
+                
+                "backgroundImage": "url(https://res.cloudinary.com/dorshaul/image/upload/v1621432797/myWeb/background%20images/galaxy_qj1xfm.jpg)",
                 // "backgroundImage": `url(${require("../assets/images/backgroundImages/galaxy.png")})`,
                 "padding": "10px",
                 "textAlign": "center"
