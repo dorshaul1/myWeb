@@ -12,8 +12,8 @@ export const WHeader = (props) => {
 
     return (
         <div className={"wHeader " + SType} style={styleToInject} >
-            <h1 name="h1" contentEditable="true" suppressContentEditableWarning={true} onBlur={(ev) => onSetValue(ev)} id={cmp.id} style={info.title.style}>{info.title.txt}</h1>
-            <h3 name="h3" contentEditable="true" suppressContentEditableWarning={true} onBlur={(ev) => onSetValue(ev)} id={cmp.id} style={info.substitle.style}>{info.substitle.txt}</h3>
+            <h1 name="title" contentEditable="true" suppressContentEditableWarning={true} onBlur={(ev) => onSetValue(ev)} id={cmp.id} style={info.title.style}>{info.title.txt}</h1>
+            <h3 name="substitle" contentEditable="true" suppressContentEditableWarning={true} onBlur={(ev) => onSetValue(ev)} id={cmp.id} style={info.substitle.style}>{info.substitle.txt}</h3>
             <a href={`site/${siteId}/${info.btn.link}`}><button name="button" contentEditable="true" suppressContentEditableWarning={true} onBlur={(ev) => onSetValue(ev)} id={cmp.id} style={info.btn.style}>{info.btn.label}</button></a>
         </div>
     )

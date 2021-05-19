@@ -36,9 +36,9 @@ const sites = [{
                 },
                 "substitle": {
                     "txt": "Your Hair is !(Who you Are)",
-                    "style": { "color": "white","margin":"0 0 20px 0" },
+                    "style": { "color": "white", "margin": "0 0 20px 0" },
                 },
-                "btn": { "label": "Schedule Today!", "link": "#wc03", "style": { "color": "white", "backgroundColor":"transparent", "padding":"10px","borderRadius":"20px","border":"2px solid white"} }
+                "btn": { "label": "Schedule Today!", "link": "#wc03", "style": { "color": "white", "backgroundColor": "transparent", "padding": "10px", "borderRadius": "20px", "border": "2px solid white" } }
             },
             "style": {
                 // "imgUrl": "https://www.geeklawblog.com/wp-content/uploads/sites/528/2018/12/liprofile-656x369.png",
@@ -80,6 +80,43 @@ const sites = [{
             "style": {
                 // "color":"red",
 
+            }
+        },
+        {
+            "id": "wc03",
+            "type": "w-footer",
+            "SType": "text-basic",
+            "info": {
+                "copyrights": {
+                    "txt": "Copyright © 2021 All Rights Reserved by myWeb.",
+                    "style": { "color": "white", "text-align": "center", "fontSize": "12px", "margin": "10px" },
+                },
+                "links": {
+                    "a": [{
+                        "label": "Facebook",
+                        "href": "https://www.facebook.com/",
+                        "style": { "color": "white" }
+                    },
+                    {
+                        "label": "Instagram",
+                        "href": "https://www.instagram.com/",
+                        "style": { "color": "white" }
+                    },
+                    {
+                        "label": "LinkedIn",
+                        "href": "https://www.linkedin.com/feed/",
+                        "style": { "color": "white" }
+                    }],
+                    "style": { "width": "100%", "display": "flex", "justify-content": "space-between","padding":"20px 0" }
+                },
+            },
+            "style": {
+                // "imgUrl": "https://www.geeklawblog.com/wp-content/uploads/sites/528/2018/12/liprofile-656x369.png",
+                // "imgName": "galaxy",
+                "backgroundColor": "darkBlue",
+                "height": "150px",
+                "padding": "10px"
+                // "color":"red",
             }
         }
     ]
