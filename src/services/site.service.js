@@ -41,10 +41,15 @@ const sites = [{
                 "btn": { "label": "Schedule Today!", "link": "#wc03", "style": { "color": "black", "backgroundColor":"transparent", "padding":"10px","borderRadius":"20px"} }
             },
             "style": {
+<<<<<<< HEAD
                 //    " background-image": "url(../../../assets/images/backgroundImages/galaxy.png)",
                 
                 "backgroundImage": "url(https://res.cloudinary.com/dorshaul/image/upload/v1621432797/myWeb/background%20images/galaxy_qj1xfm.jpg)",
                 // "backgroundImage": `url(${require("../assets/images/backgroundImages/galaxy.png")})`,
+=======
+                "imgUrl": "https://www.geeklawblog.com/wp-content/uploads/sites/528/2018/12/liprofile-656x369.png",
+                "imgName": "galaxy",
+>>>>>>> d09a2acc5074998f46021dd7cb57a6df0e3d2611
                 "padding": "10px",
                 "textAlign": "center"
             }
