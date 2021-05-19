@@ -48,19 +48,6 @@ const sites = [{
             }
         },
         {
-            "id": "wc06",
-            "type": "w-gallery",
-            "SType": "gallery-basic",
-            "info": {
-                "image1": "myWeb/galleryImages/1.jpg",
-                "image2": "myWeb/galleryImages/2.jpg",
-                "image3": "myWeb/galleryImages/3.jpg"
-            },
-            "style": {
-            
-            }
-        },
-        {
             "id": "wc01",
             "type": "w-map",
             "SType": "map-basic",
@@ -73,7 +60,8 @@ const sites = [{
             "style": {
                 "backgroundColor": "#9fd0f1",
                 "height": "300px",
-                "padding": "10px"
+                "padding": "10px",
+                "width": "100%"
             }
         },
         {
@@ -93,6 +81,19 @@ const sites = [{
             "style": {
                 // "color":"red",
 
+            }
+        },
+        {
+            "id": "wc06",
+            "type": "w-gallery",
+            "SType": "gallery-basic",
+            "info": {
+                "image1": "myWeb/galleryImages/1.jpg",
+                "image2": "myWeb/galleryImages/2.jpg",
+                "image3": "myWeb/galleryImages/3.jpg"
+            },
+            "style": {
+            
             }
         }
     ]
