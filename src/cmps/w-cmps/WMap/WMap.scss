@@ -1,1 +1,8 @@
-.wMap {}
+.wMap {
+    display: flex;
+    height: 300px;
+    img {
+        width: calc(100% / 3);
+        object-fit: cover;
+    }
+}
