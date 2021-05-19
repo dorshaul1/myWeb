@@ -41,7 +41,10 @@ const sites = [{
                 "btn": { "label": "Schedule Today!", "link": "#wc03", "style": { "color": "black", "backgroundColor":"transparent", "padding":"10px","borderRadius":"20px"} }
             },
             "style": {
-                "background": "../../../assets/images/backgroundImages/galaxy.png",
+            //    " background-image": "url(../../../assets/images/backgroundImages/galaxy.png)",
+
+                "backgroundImage": "../../../assets/images/backgroundImages/galaxy.png",
+                // "backgroundImage": `url(${require("../assets/images/backgroundImages/galaxy.png")})`,
                 "padding": "10px",
                 "textAlign": "center"
             }
