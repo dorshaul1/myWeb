@@ -41,7 +41,7 @@ const sites = [{
                 "btn": { "label": "Schedule Today!", "link": "#wc03", "style": { "color": "black", "backgroundColor":"transparent", "padding":"10px","borderRadius":"20px"} }
             },
             "style": {
-                "backgroundImage": "../../../assets/images/backgroundImages/galaxy.png",
+                "background": "../../../assets/images/backgroundImages/galaxy.png",
                 "padding": "10px",
                 "textAlign": "center"
             }
@@ -54,7 +54,7 @@ const sites = [{
                 "name": "Paris",
                 "lat": 32.109333,
                 "lng": 34.855499,
-                "zoom": 5
+                "zoom": 10
             },
             "style": {
                 "backgroundColor": "#9fd0f1",
