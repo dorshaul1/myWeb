@@ -1,1 +1,5 @@
-.wFooter {}
+.wFooter {
+    &.footer-basic{
+        height: 150px;
+    }
+}

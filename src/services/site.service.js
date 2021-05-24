@@ -44,7 +44,6 @@ const sites = [{
                 // "imgUrl": "https://www.geeklawblog.com/wp-content/uploads/sites/528/2018/12/liprofile-656x369.png",
                 "imgName": "galaxy",
                 "padding": "10px",
-                "textAlign": "center"
             }
         },
         {
@@ -97,7 +96,7 @@ const sites = [{
         {
             "id": "wc03",
             "type": "w-footer",
-            "SType": "text-basic",
+            "SType": "footer-basic",
             "info": {
                 "copyrights": {
                     "txt": "Copyright © 2021 All Rights Reserved by myWeb.",
@@ -126,7 +125,6 @@ const sites = [{
                 // "imgUrl": "https://www.geeklawblog.com/wp-content/uploads/sites/528/2018/12/liprofile-656x369.png",
                 // "imgName": "galaxy",
                 "backgroundColor": "darkBlue",
-                "height": "150px",
                 "padding": "10px"
                 // "color":"red",
             }

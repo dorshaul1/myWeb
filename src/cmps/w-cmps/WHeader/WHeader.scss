@@ -1,10 +1,9 @@
 .wHeader {
-    // background-image: url("../../../assets/images/backgroundImages/galaxy.png");
     background: no-repeat;
     background-size: cover;
     object-fit: fill;
-    // .header-basic{
-
-    // }
+    &.header-basic {
+        text-align: center;
+    }
     // background: url("../../../assets/images/backgroundImages/galaxy.png")!important,
 }
