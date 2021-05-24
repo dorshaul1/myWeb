@@ -26,8 +26,15 @@
                 object-fit: cover;
             }
 
-            a:hover {
-                text-decoration-line: underline;
+            button {
+                outline: none;
+                border: none;
+                border-radius: 5px;
+                padding: 10px;
+            }
+
+            button:hover {
+                opacity: 0.7;
             }
         }
     }

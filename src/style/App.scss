@@ -3,15 +3,11 @@
   background-color: rgb(243, 243, 243);
   min-height: 100vh;
   height: 100%;
-  // color: white;
   color: #222222;
-  // flex: ;
-
 }
 
 body::-webkit-scrollbar {
   width: 0.5em;
-  // marginright: 2px;
 }
 
 body::-webkit-scrollbar-track {
@@ -28,15 +24,14 @@ input {
   width: 300px;
   border-radius: 5px;
   margin-bottom: 30px;
-  // background-color: transparent;
-  // color: white;
   border: none;
-  // border-bottom: 1px solid grey;
+
   &:focus {
     outline: none;
   }
 }
 
-button,a{
+button,
+a {
   cursor: pointer;
 }
