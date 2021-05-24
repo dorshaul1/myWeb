@@ -147,6 +147,46 @@ const sites = [{
         },
         {
             "id": "wc07",
+            "type": "w-form",
+            "SType": "form-basic",
+            "info": {
+                "h1": {
+                    "txt": "Contact Us",
+                    "style": { "color": "black", "text-align": "center", "fontSize": "22px", "margin": "10px" },
+                },
+                "inputs": [
+                    {
+                        "title": "Name",
+                        "placeHolder": "Enter Your Name",
+                        "style": { "color": "black", "text-align": "center", "fontSize": "22px" },
+                    },
+                    {
+                        "title": "Email",
+                        "placeHolder": "Enter Your Email",
+                        "style": { "color": "black", "text-align": "center", "fontSize": "22px" },
+                    },
+                    {
+                        "title": "Subject",
+                        "placeHolder": "Enter Your Subject",
+                        "style": { "color": "black", "text-align": "center", "fontSize": "22px" },
+                    },
+                    {
+                        "title": "Number",
+                        "placeHolder": "Enter Your Number",
+                        "style": { "color": "black", "text-align": "center", "fontSize": "22px" },
+                    },
+                ],
+                "btn": { "label": "Submit", "style": { "color": "black", "backgroundColor": "white", "padding": "10px", "borderRadius": "20px", "border": "2px solid white" } }
+            },
+            "style": {
+                // "imgUrl": "https://www.geeklawblog.com/wp-content/uploads/sites/528/2018/12/liprofile-656x369.png",
+                // "imgName": "galaxy",
+                "backgroundColor": "rgb(70, 205, 205)",
+                "padding": "10px"
+            }
+        },
+        {
+            "id": "wc03",
             "type": "w-footer",
             "SType": "footer-basic",
             "info": {
@@ -181,7 +221,7 @@ const sites = [{
                 // "color":"red",
             }
         },
-       
+
     ]
 }]
 
