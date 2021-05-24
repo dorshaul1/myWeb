@@ -93,7 +93,6 @@ const sites = [{
             "style": {}
         },
         {
-<<<<<<< HEAD
             "id": "wc05",
             "type": "w-cards",
             "SType": "cards-basic",
@@ -123,8 +122,6 @@ const sites = [{
         },
         {
             "id": "wc06",
-=======
-            "id": "wc03",
             "type": "w-video",
             "SType": "video-basic",
             "info": {
@@ -150,7 +147,6 @@ const sites = [{
         },
         {
             "id": "wc03",
->>>>>>> 8843a09d9023d84d30c883e976dec6d87560b7d1
             "type": "w-footer",
             "SType": "footer-basic",
             "info": {
