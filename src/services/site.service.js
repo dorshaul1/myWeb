@@ -95,6 +95,31 @@ const sites = [{
         },
         {
             "id": "wc03",
+            "type": "w-video",
+            "SType": "video-basic",
+            "info": {
+                "informationContainer": {
+                    "style": { "backgroundColor": "rgb(134, 218, 218)", }
+                },
+                "h1": {
+                    "txt": "Bunny",
+                    "style": { "color": "black", "text-align": "center", "fontSize": "22px", "margin": "10px" },
+                },
+                "video": {
+                    "src": "https://www.youtube.com/watch?v=aqz-KE-bpKQ",
+                    "style": { "margin": "10px" },
+                },
+            },
+            "style": {
+                // "imgUrl": "https://www.geeklawblog.com/wp-content/uploads/sites/528/2018/12/liprofile-656x369.png",
+                // "imgName": "galaxy",
+                "backgroundColor": "rgb(205, 255, 255)",
+                "padding": "10px"
+                // "color":"red",
+            }
+        },
+        {
+            "id": "wc03",
             "type": "w-footer",
             "SType": "footer-basic",
             "info": {
