@@ -1,5 +1,3 @@
-
-
 import { WCards } from '../w-cmps/WCards/WCards'
 import { WDevider } from '../w-cmps/WDevider/WDevider'
 import { WFooter } from '../w-cmps/WFooter/WFooter'
@@ -12,13 +10,8 @@ import { WVideo } from '../w-cmps/WVideo/WVideo'
 import './MainDynamic.scss'
 
 export const MainDynamic = (props) => {
-// console.log('props:', props)
+    const { type } = props.cmp
 
-
-    const {type} = props.cmp
-    // const DynamicCmp = (props) => {
-    // console.log(type);
-    // console.log('cmp:', cmp)
     switch (type) {
         case 'w-header':
             return <WHeader {...props} />
