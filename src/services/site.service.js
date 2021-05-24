@@ -25,7 +25,7 @@ const sites = [{
     },
     "cmps": [
         {
-            "id": "wc02",
+            "id": "wc01",
             "type": "w-header",
             "SType": "header-basic",
             "info": {
@@ -47,7 +47,7 @@ const sites = [{
             }
         },
         {
-            "id": "wc01",
+            "id": "wc02",
             "type": "w-map",
             "SType": "map-basic",
             "info": {
@@ -57,9 +57,9 @@ const sites = [{
                 "zoom": 10
             },
             "style": {
-                "backgroundColor": "#9fd0f1",
+                "backgroundColor": "f3f3f3",
                 "height": "300px",
-                "padding": "10px",
+                "padding": "5px",
                 "width": "100%"
             }
         },
@@ -69,21 +69,20 @@ const sites = [{
             "SType": "text-basic",
             "info": {
                 "h1": {
-                    "txt": "column",
-                    "style": { "color": "red" },
+                    "txt": "This is a h1",
+                    "style": { "color": "#333" },
                 },
                 "p": {
-                    "txt": "column",
-                    "style": { "color": "blue" },
+                    "txt": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, accusamus. Facere, odio illo cumque voluptates beatae id blanditiis fugit optio neque similique quod molestias at ullam laboriosam impedit quaerat voluptatibus!",
+                    "style": { "color": "#333" },
                 }
             },
             "style": {
-                // "color":"red",
-
+                "backgroundColor": "#d3d3d3"
             }
         },
         {
-            "id": "wc06",
+            "id": "wc04",
             "type": "w-gallery",
             "SType": "gallery-basic",
             "info": {
@@ -94,6 +93,37 @@ const sites = [{
             "style": {}
         },
         {
+<<<<<<< HEAD
+            "id": "wc05",
+            "type": "w-cards",
+            "SType": "cards-basic",
+            "info": {
+                "cards": [
+                    {
+                        "title": "Pizza",
+                        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9nP6ZVvdF_Df-zNoTHvwOKMfiekTCxWc5Ng&usqp=CAU",
+                        "description": "Neapolitan pizza Margherita.",
+                        "link": "https://en.wikipedia.org/wiki/Pizza"
+                    },
+                    {
+                        "title": "Hamburger",
+                        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvipnhYZ4MnbaSWmbCx9TMuWR_xoq5xf_4ig&usqp=CAU",
+                        "description": "A hamburger (also burger for short) is a sandwich consisting of one or more cooked patties of ground meat, usually beef, placed inside a sliced bread roll or bun.",
+                        "link": "https://en.wikipedia.org/wiki/Hamburger"
+                    },
+                    {
+                        "title": "Pasta",
+                        "img": "https://medias.hashulchan.co.il/www/uploads/2019/06/shutterstock_583097113-600x600.jpg",
+                        "description": "Originally, spaghetti was notably long, but shorter lengths gained in popularity during the latter half of the 20th century and now it is most commonly available in 25–30 cm (10–12 in) lengths.",
+                        "link": "https://en.wikipedia.org/wiki/Spaghetti"
+                    },
+                ]
+            },
+            "style": {}
+        },
+        {
+            "id": "wc06",
+=======
             "id": "wc03",
             "type": "w-video",
             "SType": "video-basic",
@@ -120,6 +150,7 @@ const sites = [{
         },
         {
             "id": "wc03",
+>>>>>>> 8843a09d9023d84d30c883e976dec6d87560b7d1
             "type": "w-footer",
             "SType": "footer-basic",
             "info": {
@@ -153,7 +184,8 @@ const sites = [{
                 "padding": "10px"
                 // "color":"red",
             }
-        }
+        },
+       
     ]
 }]
 

@@ -11,12 +11,14 @@ export const Site = (props) => {
     const [site, setSite] = useState(null)
 
     useEffect(() => {
-        setSite(state.currSite)
         loadSite()
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [props.match.params.siteId, state.currSite])
-    
-    
+    }, [props.match.params.siteId])
+
+    useEffect(() => {
+        setSite(state.currSite)
+    }, [state.currSite])
+
     useEffect(() => {
         dispatch(togglePreview())
         return () => {
@@ -25,15 +27,9 @@ export const Site = (props) => {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
-    
+
     const loadSite = async () => {
         dispatch(getSiteById(props.match.params.siteId))
-        // let currSite = state.currSite
-        // console.log('state:', state)
-         dispatch(getSiteById(props.match.params.siteId))
-        setSite(state.currSite)
-        // console.log('site:', site)
-        // console.log('site:', state.currSite)
     }
 
     const onSetValue = async (ev) => {
@@ -45,7 +41,6 @@ export const Site = (props) => {
 
     return (
         site && <div className="site" style={site.style}>
-            {/* <h1 >site</h1> */}
             {site && site.cmps.map((cmp) => <MainDynamic onSetValue={onSetValue} key={cmp.id} cmp={cmp} siteId={site._id} />)}
         </div>
     )

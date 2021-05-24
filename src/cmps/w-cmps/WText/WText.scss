@@ -1,8 +1,8 @@
 .wText {
-    // & > * {
-    //     cursor: pointer;
-    //     &:hover {
-    //         outline: 1px solid blue;
-    //     }
-    // }
+   &.text-basic {
+       padding: 50px;
+       h1, p {
+           margin-block-end: 10px;
+       }
+   }
 }
