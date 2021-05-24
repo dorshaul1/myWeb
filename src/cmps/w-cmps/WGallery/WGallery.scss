@@ -1,1 +1,9 @@
-.wGallery {}
+.wGallery {
+    &.gallery-basic {
+        display: flex;
+        img {
+            width: calc(100% / 3);
+            object-fit: cover;
+        }
+    }
+}
