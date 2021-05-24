@@ -1,11 +1,11 @@
 .wVideo {
     // background-color: rgb(134, 218, 218);
     &.video-basic{
-        position: relative;
         display: flex;
-        height: 450px;
+        height: 460px;
         justify-content: center;
         .video-information-container{
+            position: relative;
             width: 640px;
             height: 360px;
         }
@@ -13,7 +13,7 @@
         .video-container{
             position: absolute;
             // right: 640px;
-            left: 20%;
+            left: -150px;
             top: 100px;
         }
     }

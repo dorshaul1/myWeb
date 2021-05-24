@@ -25,11 +25,13 @@ body::-webkit-scrollbar-thumb {
 
 input {
   margin-top: 15px;
+  width: 300px;
+  border-radius: 5px;
   margin-bottom: 30px;
-  background-color: transparent;
-  color: white;
+  // background-color: transparent;
+  // color: white;
   border: none;
-  border-bottom: 1px solid grey;
+  // border-bottom: 1px solid grey;
   &:focus {
     outline: none;
   }
