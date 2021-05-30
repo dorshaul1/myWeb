@@ -64,7 +64,7 @@ const sites = [{
             }
         },
         {
-            "id": "wc09",
+            "id": "wc03",
             "type": "w-text",
             "SType": "text-basic",
             "info": {
@@ -186,7 +186,7 @@ const sites = [{
             }
         },
         {
-            "id": "wc03",
+            "id": "wc08",
             "type": "w-footer",
             "SType": "footer-basic",
             "info": {
