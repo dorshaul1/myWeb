@@ -1,1 +1,13 @@
-.editorAdd {}
+.editorAdd {
+    padding: 20px 0;
+    .types-container{
+        gap: 20px;
+
+        .type-btn{
+            background-color: grey;
+            color: white;
+            padding: 30px;
+            width: 50px;
+        }
+    }
+}
