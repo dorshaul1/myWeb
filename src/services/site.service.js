@@ -64,7 +64,7 @@ const sites = [{
             }
         },
         {
-            "id": "wc03",
+            "id": "wc09",
             "type": "w-text",
             "SType": "text-basic",
             "info": {
@@ -130,7 +130,7 @@ const sites = [{
                 },
                 "h1": {
                     "txt": "Bunny",
-                    "style": { "color": "black", "text-align": "center", "fontSize": "22px", "margin": "10px" },
+                    "style": { "color": "black", "textAlign": "center", "fontSize": "22px", "margin": "10px" },
                 },
                 "video": {
                     "src": "https://www.youtube.com/watch?v=aqz-KE-bpKQ",
@@ -152,28 +152,28 @@ const sites = [{
             "info": {
                 "h1": {
                     "txt": "Contact Us",
-                    "style": { "color": "black", "text-align": "center", "fontSize": "22px", "margin": "10px" },
+                    "style": { "color": "black", "textAlign": "center", "fontSize": "22px", "margin": "10px" },
                 },
                 "inputs": [
                     {
                         "title": "Name",
                         "placeHolder": "Enter Your Name",
-                        "style": { "color": "black", "text-align": "center", "fontSize": "22px" },
+                        "style": { "color": "black", "textAlign": "center", "fontSize": "22px" },
                     },
                     {
                         "title": "Email",
                         "placeHolder": "Enter Your Email",
-                        "style": { "color": "black", "text-align": "center", "fontSize": "22px" },
+                        "style": { "color": "black", "textAlign": "center", "fontSize": "22px" },
                     },
                     {
                         "title": "Subject",
                         "placeHolder": "Enter Your Subject",
-                        "style": { "color": "black", "text-align": "center", "fontSize": "22px" },
+                        "style": { "color": "black", "textAlign": "center", "fontSize": "22px" },
                     },
                     {
                         "title": "Number",
                         "placeHolder": "Enter Your Number",
-                        "style": { "color": "black", "text-align": "center", "fontSize": "22px" },
+                        "style": { "color": "black", "textAlign": "center", "fontSize": "22px" },
                     },
                 ],
                 "btn": { "label": "Submit", "style": { "color": "black", "backgroundColor": "white", "padding": "10px", "borderRadius": "20px", "border": "2px solid white" } }
@@ -192,7 +192,7 @@ const sites = [{
             "info": {
                 "copyrights": {
                     "txt": "Copyright © 2021 All Rights Reserved by myWeb.",
-                    "style": { "color": "white", "text-align": "center", "fontSize": "12px", "margin": "10px" },
+                    "style": { "color": "white", "textAlign": "center", "fontSize": "12px", "margin": "10px" },
                 },
                 "links": {
                     "a": [{
@@ -210,7 +210,7 @@ const sites = [{
                         "href": "https://www.linkedin.com/feed/",
                         "style": { "color": "white" }
                     }],
-                    "style": { "width": "100%", "display": "flex", "justify-content": "space-between", "padding": "20px 0" }
+                    "style": { "width": "100%", "display": "flex", "justifyContent": "space-between", "padding": "20px 0" }
                 },
             },
             "style": {

@@ -1,7 +1,8 @@
 const INITIAL_STATE = {
   sites: [],
   currSite: null,
-  isPreview: false
+  isPreview: false,
+  isEditing: false
 }
 
 export function siteReducer(state = INITIAL_STATE, action) {
@@ -39,6 +40,12 @@ export function siteReducer(state = INITIAL_STATE, action) {
       return {
         ...state,
         isPreview: !state.isPreview
+      }
+    case 'TOGGLE_EDITING':
+      // const { updatedSite } = action
+      return {
+        ...state,
+        isEditing: !state.isPreview
       }
     case 'CHANGE_PROPERTY':
       const { newSite } = action

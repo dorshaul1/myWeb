@@ -44,6 +44,12 @@ export function togglePreview() {
   }
 }
 
+export function toggleEditting() {
+  return async dispatch => {
+    dispatch({ type: 'TOGGLE_EDITING' })
+  }
+}
+
 export function changeProperty(site, cmpId, value, name, property) {
   return async dispatch => {
     const newSite = await siteService.changeProperty(site, cmpId, value, name, property)
