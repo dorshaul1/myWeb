@@ -44,9 +44,15 @@ export function togglePreview() {
   }
 }
 
-export function toggleEditting() {
+export function toggleEditing() {
   return async dispatch => {
     dispatch({ type: 'TOGGLE_EDITING' })
+  }
+}
+
+export function getCmpTypes() {
+  return async dispatch => {
+    return siteService.getCmpTypes()
   }
 }
 
@@ -56,4 +62,12 @@ export function changeProperty(site, cmpId, value, name, property) {
     // const siteIdx = await siteService.getSiteIdxById(site.id)
     dispatch({ type: 'CHANGE_PROPERTY', newSite  })
 }
+}
+
+
+export function addCmp(siteId, newCmp) {
+  return async dispatch => {
+    const site = await siteService.addCmp(siteId, newCmp)
+    dispatch({ type: 'SET_SITE', site })
+  }
 }

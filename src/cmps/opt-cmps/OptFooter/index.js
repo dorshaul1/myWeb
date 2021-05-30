@@ -1,0 +1,1 @@
+export { OptFooter } from './OptFooter'

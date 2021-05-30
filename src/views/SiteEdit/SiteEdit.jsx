@@ -3,11 +3,12 @@
 import { Site } from '../../cmps/Site'
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { changeProperty, getSiteById, toggleEditting } from '../../store/actions/siteAction'
+import { changeProperty, getSiteById, toggleEditing } from '../../store/actions/siteAction'
 import './SiteEdit.scss'
 import { Editor } from '../../cmps/Editor/Editor'
 
 export const SiteEdit = (props) => {
+
     const dispatch = useDispatch()
     const state = useSelector(state => state.siteReducer)
 
@@ -21,14 +22,14 @@ export const SiteEdit = (props) => {
     // }, [state.currSite])
 
     useEffect(() => {
-        dispatch(toggleEditting())
+        dispatch(toggleEditing())
         return () => {
-            dispatch(toggleEditting())
+            dispatch(toggleEditing())
         }
-        //     // eslint-disable-next-line react-hooks/exhaustive-deps
-    })
+            // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [])
 
-    const loadSite = async () => {
+    const loadSite = () => {
         dispatch(getSiteById(props.match.params.siteId))
     }
 
@@ -38,7 +39,7 @@ export const SiteEdit = (props) => {
         const cmpId = ev.target.getAttribute("id")
         dispatch(changeProperty(state.currSite, cmpId, value, elName, "txt"))
     }
-    
+
     return (
         <div className="siteEdit flex">
             {state.currSite && <Editor />}

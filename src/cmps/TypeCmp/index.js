@@ -1,0 +1,1 @@
+export { TypeCmp } from './TypeCmp'

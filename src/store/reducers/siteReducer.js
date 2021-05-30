@@ -45,7 +45,7 @@ export function siteReducer(state = INITIAL_STATE, action) {
       // const { updatedSite } = action
       return {
         ...state,
-        isEditing: !state.isPreview
+        isEditing: !state.isEditing
       }
     case 'CHANGE_PROPERTY':
       const { newSite } = action

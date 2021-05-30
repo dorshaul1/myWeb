@@ -6,7 +6,44 @@ export default {
     remove,
     saveSite,
     getEmptySite,
-    changeProperty
+    changeProperty,
+    getCmpTypes,
+    addCmp
+}
+
+const cmpOptions = {
+    "Header": [
+        {
+            "type": "w-header",
+            "SType": "header-basic",
+            "name": "Basic Header",
+            "img": null,
+            "info": {
+                "title": {
+                    "txt": "I'm a header!",
+                    "style": { "color": "white" },
+                },
+                "substitle": {
+                    "txt": "I'm a subtitle",
+                    "style": { "color": "white", "margin": "0 0 20px 0" },
+                },
+                "btn": { "label": "I'm a call to action", "link": "#wc03", "style": { "color": "white", "backgroundColor": "transparent", "padding": "10px", "borderRadius": "20px", "border": "2px solid white" } }
+            },
+            "style": {
+                "imgName": "galaxy",
+                "padding": "10px",
+                "imgUrl": null
+            }
+        }
+    ],
+    "Footer": [],
+    "Map": [],
+    "Gallery": [],
+    "Text": [],
+    "Cards": [],
+    "Video": [],
+    "Divider": [],
+    "Form": [],
 }
 
 const sites = [{
@@ -299,4 +336,16 @@ function _makeId(length = 10) {
         txt += possible.charAt(Math.floor(Math.random() * possible.length))
     }
     return txt
+}
+
+
+function getCmpTypes() {
+    return cmpOptions
+}
+
+async function addCmp(siteId, newCmp) {
+    newCmp.id = _makeId()
+    const siteIdx = sites.findIndex(site => site._id === siteId)
+    sites[siteIdx].cmps.unshift(newCmp)
+    return sites[siteIdx]
 }
