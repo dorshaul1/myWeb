@@ -17,7 +17,6 @@ import { useEffect, useState } from 'react'
 export const TypeCmp = (props) => {
     const dispatch = useDispatch()
     const [cmpTypes, setCmpTypes] = useState(null)
-
     const { type } = props
 
     const getTypes = async () => {
