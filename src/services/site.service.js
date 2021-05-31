@@ -16,7 +16,7 @@ const cmpOptions = {
         {
             "type": "w-header",
             "SType": "header-basic",
-            "name": "Basic Header",
+            "name": "Header Basic",
             "img": null,
             "info": {
                 "title": {
@@ -40,7 +40,35 @@ const cmpOptions = {
     "Map": [],
     "Gallery": [],
     "Text": [],
-    "Cards": [],
+    "Cards": [{
+        "name": "Cards Basic",
+        "img": null,
+        "type": "w-cards",
+        "SType": "cards-basic",
+        "info": {
+            "cards": [
+                {
+                    "title": "Pizza",
+                    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9nP6ZVvdF_Df-zNoTHvwOKMfiekTCxWc5Ng&usqp=CAU",
+                    "description": "Neapolitan pizza Margherita.",
+                    "link": "https://en.wikipedia.org/wiki/Pizza"
+                },
+                {
+                    "title": "Hamburger",
+                    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvipnhYZ4MnbaSWmbCx9TMuWR_xoq5xf_4ig&usqp=CAU",
+                    "description": "A hamburger (also burger for short) is a sandwich consisting of one or more cooked patties of ground meat, usually beef, placed inside a sliced bread roll or bun.",
+                    "link": "https://en.wikipedia.org/wiki/Hamburger"
+                },
+                {
+                    "title": "Pasta",
+                    "img": "https://medias.hashulchan.co.il/www/uploads/2019/06/shutterstock_583097113-600x600.jpg",
+                    "description": "Originally, spaghetti was notably long, but shorter lengths gained in popularity during the latter half of the 20th century and now it is most commonly available in 25–30 cm (10–12 in) lengths.",
+                    "link": "https://en.wikipedia.org/wiki/Spaghetti"
+                },
+            ]
+        },
+        "style": {}
+    }],
     "Video": [],
     "Divider": [],
     "Form": [],
