@@ -72,11 +72,44 @@ const cmpOptions = {
                 "backgroundColor": "darkBlue",
                 "padding": "10px"
             }
-        },
+        }
     ],
     "Map": [],
-    "Gallery": [],
-    "Text": [],
+    "Gallery": [
+        {
+            "name":"Gallery Basic",
+            "img":null,
+            "type": "w-gallery",
+            "SType": "gallery-basic",
+            "info": {
+                "image1": "myWeb/galleryImages/1.jpg",
+                "image2": "myWeb/galleryImages/2.jpg",
+                "image3": "myWeb/galleryImages/3.jpg"
+            },
+            "style": {}
+        },
+    ],
+    "Text": [
+        {
+            "name":"Text Basic",
+            "img":null,
+            "type": "w-text",
+            "SType": "text-basic",
+            "info": {
+                "h1": {
+                    "txt": "This is a h1",
+                    "style": { "color": "#333" },
+                },
+                "p": {
+                    "txt": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, accusamus. Facere, odio illo cumque voluptates beatae id blanditiis fugit optio neque similique quod molestias at ullam laboriosam impedit quaerat voluptatibus!",
+                    "style": { "color": "#333" },
+                }
+            },
+            "style": {
+                "backgroundColor": "#d3d3d3"
+            }
+        },
+    ],
     "Cards": [{
         "name": "Cards Basic",
         "img": null,
@@ -106,7 +139,34 @@ const cmpOptions = {
         },
         "style": {}
     }],
-    "Video": [],
+    "Video": [
+        {
+            "name": "Video Basic",
+            "img": null,
+            "type": "w-video",
+            "SType": "video-basic",
+            "info": {
+                "informationContainer": {
+                    "style": { "backgroundColor": "rgb(134, 218, 218)", }
+                },
+                "h1": {
+                    "txt": "This is a video",
+                    "style": { "color": "black", "textAlign": "center", "fontSize": "22px", "margin": "10px" },
+                },
+                "video": {
+                    "src": "https://www.youtube.com/watch?v=aqz-KE-bpKQ",
+                    "style": { "margin": "10px" },
+                },
+            },
+            "style": {
+                // "imgUrl": "https://www.geeklawblog.com/wp-content/uploads/sites/528/2018/12/liprofile-656x369.png",
+                // "imgName": "galaxy",
+                "backgroundColor": "rgb(205, 255, 255)",
+                "padding": "10px"
+                // "color":"red",
+            }
+        },
+    ],
     "Divider": [],
     "Form": [],
 }
