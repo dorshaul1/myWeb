@@ -1,4 +1,19 @@
 .editor {
     max-width: 350px;
     min-width: 350px;
+.editor-btn-container{
+    .editor-btn{
+        width: 50%;
+        height: 60px;
+        border: none;
+        font-size: 1rem;
+        // font-weight: 600;
+        // border-bottom: none;
+        // border-left: none;
+        background-color: rgb(194, 194, 194);
+        &.active{
+            background-color: rgb(243, 243, 243);
+        }
+    }
+}
 }

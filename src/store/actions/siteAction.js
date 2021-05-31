@@ -60,14 +60,20 @@ export function changeProperty(site, cmpId, value, name, property) {
   return async dispatch => {
     const newSite = await siteService.changeProperty(site, cmpId, value, name, property)
     // const siteIdx = await siteService.getSiteIdxById(site.id)
-    dispatch({ type: 'CHANGE_PROPERTY', newSite  })
+    dispatch({ type: 'CHANGE_PROPERTY', newSite })
+  }
 }
-}
-
 
 export function addCmp(siteId, newCmp) {
   return async dispatch => {
     const site = await siteService.addCmp(siteId, newCmp)
     dispatch({ type: 'SET_SITE', site })
+  }
+}
+
+export function setElement(cmpId, element = null) {
+  return async dispatch => {
+    const elToEdit = element ? {cmpId, ...element} : null
+    dispatch({ type: 'SET_EL', elToEdit })
   }
 }

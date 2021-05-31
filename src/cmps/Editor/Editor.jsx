@@ -9,8 +9,10 @@ export const Editor = (props) => {
     const [isEdit, setIsEdit] = useState(false)
     return (
         <div className="editor">
-            <button onClick={() => setIsEdit(false)}>Add</button>
-            <button onClick={() => setIsEdit(true)}>Edit</button>
+            <div className="editor-btn-container flex space-between">
+                <button className={`editor-btn ${isEdit?"":"active"}`} onClick={() => setIsEdit(false)}>Add</button>
+                <button className={`editor-btn ${isEdit?"active":""}`} onClick={() => setIsEdit(true)}>Edit</button>
+            </div>
             <div className="editor-container">
                 {isEdit ? <EditorEdit /> : <EditorAdd />}
             </div>

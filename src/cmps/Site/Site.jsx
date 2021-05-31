@@ -2,13 +2,13 @@ import { MainDynamic } from '../MainDynamic/MainDynamic'
 import './Site.scss'
 
 export const Site = (props) => {
-    const { site, isEditing, onSetValue } = props
-    console.log(site.cmps)
+    const { site, isEditing, onSetValue, onSetElToEdit } = props
+    // console.log(site.cmps)
 
     const DynamicCmp = (cmp) => {
 
         return isEditing ?
-            <MainDynamic isEditing={isEditing} onSetValue={onSetValue} key={cmp.id} cmp={cmp} siteId={site._id} /> :
+            <MainDynamic onSetElToEdit={onSetElToEdit} isEditing={isEditing} onSetValue={onSetValue} key={cmp.id} cmp={cmp} siteId={site._id} /> :
             <MainDynamic isEditing={isEditing} key={cmp.id} cmp={cmp} siteId={site._id} />
     }
 

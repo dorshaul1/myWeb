@@ -2,7 +2,8 @@ const INITIAL_STATE = {
   sites: [],
   currSite: null,
   isPreview: false,
-  isEditing: false
+  isEditing: false,
+  elToEdit: null
 }
 
 export function siteReducer(state = INITIAL_STATE, action) {
@@ -52,6 +53,12 @@ export function siteReducer(state = INITIAL_STATE, action) {
       return {
         ...state,
         currSite: newSite
+      }
+    case 'SET_EL':
+      const { elToEdit } = action
+      return {
+        ...state,
+        elToEdit
       }
     default:
       return state

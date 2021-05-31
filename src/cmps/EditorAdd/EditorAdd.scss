@@ -1,13 +1,20 @@
 .editorAdd {
     padding: 20px 0;
     .types-container{
+        // margin: 0 auto;
         gap: 20px;
 
         .type-btn{
-            background-color: grey;
+            background-color: rgb(190, 190, 190);
             color: white;
-            padding: 30px;
+            padding: 20px;
             width: 50px;
+            border-radius: 6px;
+            cursor: pointer;
+            &:hover{
+                background-color: rgb(167, 167, 167);
+
+            }
         }
     }
 }
