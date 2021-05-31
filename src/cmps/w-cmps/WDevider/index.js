@@ -1,1 +1,0 @@
-export { WDevider } from './WDevider'

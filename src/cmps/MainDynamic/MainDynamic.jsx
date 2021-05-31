@@ -1,5 +1,5 @@
 import { WCards } from '../w-cmps/WCards/WCards'
-import { WDevider } from '../w-cmps/WDevider/WDevider'
+import { WDivider } from '../w-cmps/WDivider/WDivider'
 import { WFooter } from '../w-cmps/WFooter/WFooter'
 import { WForm } from '../w-cmps/WForm/WForm'
 import { WGallery } from '../w-cmps/WGallery/WGallery'
@@ -28,7 +28,7 @@ export const MainDynamic = (props) => {
         case 'w-video':
             return <WVideo {...props} />
         case 'w-divider':
-            return <WDevider {...props} />
+            return <WDivider {...props} />
         case 'w-form':
             return <WForm {...props} />
         default:

@@ -7,7 +7,7 @@ import { OptGallery } from '../opt-cmps/OptGallery'
 import { OptText } from '../opt-cmps/OptText'
 import { OptCards } from '../opt-cmps/OptCards'
 import { OptVideo } from '../opt-cmps/OptVideo'
-import { OptDevider } from '../opt-cmps/OptDevider'
+import { OptDivider } from '../opt-cmps/OptDivider'
 import { OptForm } from '../opt-cmps/OptForm'
 import './TypeCmp.scss'
 import { useDispatch } from 'react-redux'
@@ -54,7 +54,7 @@ export const TypeCmp = (props) => {
         case 'Video':
             return cmpTypes && <OptVideo {...props} types={getType()} />
         case 'Divider':
-            return cmpTypes && <OptDevider {...props} types={getType()} />
+            return cmpTypes && <OptDivider {...props} types={getType()} />
         case 'Form':
             return cmpTypes && <OptForm {...props} types={getType()} />
         default:

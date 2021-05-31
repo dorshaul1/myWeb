@@ -37,7 +37,24 @@ const cmpOptions = {
         }
     ],
     "Footer": [],
-    "Map": [],
+    "Map": [ {
+        "name": "Map Basic",
+        "img": null,
+        "type": "w-map",
+        "SType": "map-basic",
+        "info": {
+            "name": "Paris",
+            "lat": 32.109333,
+            "lng": 34.855499,
+            "zoom": 10
+        },
+        "style": {
+            "backgroundColor": "f3f3f3",
+            "height": "300px",
+            "padding": "5px",
+            "width": "100%"
+        }
+    },],
     "Gallery": [],
     "Text": [],
     "Cards": [{
@@ -70,8 +87,59 @@ const cmpOptions = {
         "style": {}
     }],
     "Video": [],
-    "Divider": [],
-    "Form": [],
+    "Divider": [ {
+        "type": "w-divider",
+        "SType": "divider-basic",
+        "name": "Divider Basic",
+        "img": null,
+        "info": {},
+        "style": {
+            "imgName": "mountains",
+            "height": "50px",
+            "imgUrl": null
+        }
+    }],
+    "Form": [ {
+        "name": "Form Basic",
+        "img": null,
+        "type": "w-form",
+        "SType": "form-basic",
+        "info": {
+            "h1": {
+                "txt": "Contact Us",
+                "style": { "color": "black", "textAlign": "center", "fontSize": "22px", "margin": "10px" },
+            },
+            "inputs": [
+                {
+                    "title": "Name",
+                    "placeHolder": "Enter Your Name",
+                    "style": { "color": "black", "textAlign": "center", "fontSize": "22px" },
+                },
+                {
+                    "title": "Email",
+                    "placeHolder": "Enter Your Email",
+                    "style": { "color": "black", "textAlign": "center", "fontSize": "22px" },
+                },
+                {
+                    "title": "Subject",
+                    "placeHolder": "Enter Your Subject",
+                    "style": { "color": "black", "textAlign": "center", "fontSize": "22px" },
+                },
+                {
+                    "title": "Number",
+                    "placeHolder": "Enter Your Number",
+                    "style": { "color": "black", "textAlign": "center", "fontSize": "22px" },
+                },
+            ],
+            "btn": { "label": "Submit", "style": { "color": "black", "backgroundColor": "white", "padding": "10px", "borderRadius": "20px", "border": "2px solid white" } }
+        },
+        "style": {
+            // "imgUrl": "https://www.geeklawblog.com/wp-content/uploads/sites/528/2018/12/liprofile-656x369.png",
+            // "imgName": "galaxy",
+            "backgroundColor": "rgb(70, 205, 205)",
+            "padding": "10px"
+        }
+    }],
 }
 
 const sites = [{
@@ -156,6 +224,19 @@ const sites = [{
                 "image3": "myWeb/galleryImages/3.jpg"
             },
             "style": {}
+        },
+        {
+            "id": "wc09",
+            "type": "w-divider",
+            "SType": "divider-basic",
+            "name": "Divider Basic",
+            "img": null,
+            "info": {},
+            "style": {
+                "imgName": "mountains",
+                "height": "50px",
+                "imgUrl": null
+            }
         },
         {
             "id": "wc05",

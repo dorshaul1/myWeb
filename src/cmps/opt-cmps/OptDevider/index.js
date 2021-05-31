@@ -1,1 +1,0 @@
-export { OptDevider } from './OptDevider'

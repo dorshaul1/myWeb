@@ -2,11 +2,10 @@
 
 import './OptForm.scss'
 
-export const OptForm = (props) => {
-
+export const OptForm = ({ types, onAddCmp }) => {
     return (
         <div>
-        
+            {types && types.map((opt, idx) => <div onClick={() => onAddCmp(types[idx])} className="opt-btn" key={idx} ><h4>{opt.name}</h4></div>)}
         </div>
     )
 }
