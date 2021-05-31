@@ -36,7 +36,44 @@ const cmpOptions = {
             }
         }
     ],
-    "Footer": [],
+    "Footer": [
+        {
+            "type": "w-footer",
+            "SType": "footer-basic",
+            "name":"Footer Basic",
+            "img":null,
+            "info": {
+                "copyrights": {
+                    "txt": "Copyright © 2021 All Rights Reserved by myWeb.",
+                    "style": { "color": "white", "textAlign": "center", "fontSize": "12px", "margin": "10px" },
+                },
+                "links": {
+                    "a": [{
+                        "label": "Facebook",
+                        "href": "https://www.facebook.com/",
+                        "style": { "color": "white" }
+                    },
+                    {
+                        "label": "Instagram",
+                        "href": "https://www.instagram.com/",
+                        "style": { "color": "white" }
+                    },
+                    {
+                        "label": "LinkedIn",
+                        "href": "https://www.linkedin.com/feed/",
+                        "style": { "color": "white" }
+                    }],
+                    "style": { "width": "100%", "display": "flex", "justifyContent": "space-between", "padding": "20px 0" }
+                },
+            },
+            "style": {
+                // "imgUrl": "https://www.geeklawblog.com/wp-content/uploads/sites/528/2018/12/liprofile-656x369.png",
+                // "imgName": "galaxy",
+                "backgroundColor": "darkBlue",
+                "padding": "10px"
+            }
+        },
+    ],
     "Map": [],
     "Gallery": [],
     "Text": [],
