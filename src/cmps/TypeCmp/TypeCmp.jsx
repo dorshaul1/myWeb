@@ -42,21 +42,21 @@ export const TypeCmp = (props) => {
         case 'Header':
             return cmpTypes && <OptHeader {...props} types={getType()} />
         case 'Footer':
-            return <OptFooter {...props} />
+            return cmpTypes && <OptFooter {...props} types={getType()} />
         case 'Map':
-            return <OptMap {...props} />
+            return cmpTypes && <OptMap {...props} types={getType()} />
         case 'Gallery':
-            return <OptGallery {...props} />
+            return cmpTypes && <OptGallery {...props} types={getType()} />
         case 'Text':
-            return <OptText {...props} />
+            return cmpTypes && <OptText {...props} types={getType()} />
         case 'Cards':
-            return <OptCards {...props} />
+            return cmpTypes && <OptCards {...props} types={getType()} />
         case 'Video':
-            return <OptVideo {...props} />
+            return cmpTypes && <OptVideo {...props} types={getType()} />
         case 'Divider':
-            return <OptDevider {...props} />
+            return cmpTypes && <OptDevider {...props} types={getType()} />
         case 'Form':
-            return <OptForm {...props} />
+            return cmpTypes && <OptForm {...props} types={getType()} />
         default:
             return //...some default error view
     }
