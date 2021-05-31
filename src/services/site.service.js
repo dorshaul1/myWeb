@@ -40,8 +40,8 @@ const cmpOptions = {
         {
             "type": "w-footer",
             "SType": "footer-basic",
-            "name":"Footer Basic",
-            "img":null,
+            "name": "Footer Basic",
+            "img": null,
             "info": {
                 "copyrights": {
                     "txt": "Copyright © 2021 All Rights Reserved by myWeb.",
@@ -74,11 +74,28 @@ const cmpOptions = {
             }
         }
     ],
-    "Map": [],
+    "Map": [{
+        "name": "Map Basic",
+        "img": null,
+        "type": "w-map",
+        "SType": "map-basic",
+        "info": {
+            "name": "Paris",
+            "lat": 32.109333,
+            "lng": 34.855499,
+            "zoom": 10
+        },
+        "style": {
+            "backgroundColor": "f3f3f3",
+            "height": "300px",
+            "padding": "5px",
+            "width": "100%"
+        }
+    }],
     "Gallery": [
         {
-            "name":"Gallery Basic",
-            "img":null,
+            "name": "Gallery Basic",
+            "img": null,
             "type": "w-gallery",
             "SType": "gallery-basic",
             "info": {
@@ -91,8 +108,8 @@ const cmpOptions = {
     ],
     "Text": [
         {
-            "name":"Text Basic",
-            "img":null,
+            "name": "Text Basic",
+            "img": null,
             "type": "w-text",
             "SType": "text-basic",
             "info": {
@@ -139,7 +156,7 @@ const cmpOptions = {
         },
         "style": {}
     }],
-    "Divider": [ {
+    "Divider": [{
         "type": "w-divider",
         "SType": "divider-basic",
         "name": "Divider Basic",
@@ -151,7 +168,7 @@ const cmpOptions = {
             "imgUrl": null
         }
     }],
-    "Form": [ {
+    "Form": [{
         "name": "Form Basic",
         "img": null,
         "type": "w-form",
@@ -534,6 +551,7 @@ function getCmpTypes() {
 
 async function addCmp(siteId, newCmp) {
     newCmp.id = _makeId()
+    console.log(newCmp.id);
     const siteIdx = sites.findIndex(site => site._id === siteId)
     sites[siteIdx].cmps.unshift(newCmp)
     return sites[siteIdx]

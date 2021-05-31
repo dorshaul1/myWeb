@@ -27,17 +27,17 @@ export const TypeCmp = (props) => {
     const getType = () => {
         return cmpTypes[type]
     }
-
-    useEffect(() => {
-        console.log(cmpTypes)
-    }, [cmpTypes])
-
+    
     useEffect(() => {
         getTypes()
         return () => {
         }
     }, [])
-
+    
+        // useEffect(() => {
+        //     console.log(cmpTypes)
+        // }, [cmpTypes])
+    
     switch (type) {
         case 'Header':
             return cmpTypes && <OptHeader {...props} types={getType()} />
