@@ -71,9 +71,19 @@ export function addCmp(siteId, newCmp) {
   }
 }
 
-export function setElement(cmpId, element = null) {
+export function setElement(cmpId, element = null, elName) {
   return async dispatch => {
-    const elToEdit = element ? {cmpId, ...element} : null
+    // console.log('element:', element)
+    const elToEdit = element ? { cmpId, elName, details: {...element} } : null
     dispatch({ type: 'SET_EL', elToEdit })
+  }
+}
+
+export function updateEl(siteId, newEl) {
+  return async dispatch => {
+    // console.log('element:', element)
+    // const elToEdit = element ? { cmpId, elName, ...element } : null
+    const newSite = await siteService.updateEl(siteId, newEl)
+    // dispatch({ type: 'SET_SITE', elToEdit })
   }
 }

@@ -8,7 +8,8 @@ export default {
     getEmptySite,
     changeProperty,
     getCmpTypes,
-    addCmp
+    addCmp,
+    updateEl
 }
 
 const cmpOptions = {
@@ -268,7 +269,7 @@ const sites = [{
                     "txt": "Your Hair is !(Who you Are)",
                     "style": { "color": "white", "margin": "0 0 20px 0" },
                 },
-                "btn": { "label": "Schedule Today!", "link": "#wc03", "style": { "color": "white", "backgroundColor": "transparent", "padding": "10px", "borderRadius": "20px", "border": "2px solid white" } }
+                "button": { "label": "Schedule Today!", "link": "", "style": { "color": "white", "backgroundColor": "transparent", "padding": "10px", "borderRadius": "20px", "border": "2px solid white" } }
             },
             "style": {
                 // "imgUrl": "https://www.geeklawblog.com/wp-content/uploads/sites/528/2018/12/liprofile-656x369.png",
@@ -555,4 +556,11 @@ async function addCmp(siteId, newCmp) {
     const siteIdx = sites.findIndex(site => site._id === siteId)
     sites[siteIdx].cmps.unshift(newCmp)
     return sites[siteIdx]
+}
+
+async function updateEl(siteId, newEl) {
+    const siteIdx = sites.findIndex(site => site._id === siteId)
+    const cmpIdx = sites[siteIdx].cmps.findIndex(cmp => newEl.cmpId === cmp.id)
+    // console.log('sites[siteIdx].cmps[cmpIdx].info[newEl.elName]:', sites[siteIdx].cmps[cmpIdx].info[newEl.elName])
+    sites[siteIdx].cmps[cmpIdx].info[newEl.elName] = newEl.details 
 }

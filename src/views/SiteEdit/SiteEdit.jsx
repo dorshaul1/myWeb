@@ -36,24 +36,26 @@ export const SiteEdit = (props) => {
     }
 
     const onSetValue = async (ev, cmp = null) => {
+        ev.preventDefault()
         // const value = ev.target.innerText
         const elName = ev.target.getAttribute("name")
         // const cmpId = ev.target.getAttribute("id")
         // dispatch(updateCmp(state.currSite, cmp.Id, value, elName, "txt"))
     }
     const onSetElToEdit = (ev, cmp) => {
+        // ev.preventDefault()
         // console.log('ev:', ev)
         // console.log('cmp', cmp);
         // console.log('element:', element)
         const elName = ev.target.getAttribute("name")
         const elToEdit = cmp.info[elName]
 
-        dispatch(setElement(cmp.id, elToEdit))
+        dispatch(setElement(cmp.id, elToEdit,elName))
         // console.log(state.elToEdit);
     }
 
     useEffect(() => {
-        console.log(state.elToEdit);
+        // console.log(state.elToEdit);
         return () => {
         }
     }, [state.elToEdit])

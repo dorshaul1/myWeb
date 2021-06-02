@@ -58,7 +58,7 @@ export function siteReducer(state = INITIAL_STATE, action) {
       const { elToEdit } = action
       return {
         ...state,
-        elToEdit
+        elToEdit: { ...elToEdit, siteId: state.currSite._id }
       }
     default:
       return state
