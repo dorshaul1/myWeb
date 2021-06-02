@@ -3,7 +3,17 @@
     background-size: cover;
     object-fit: fill;
     &.header-basic {
-        text-align: center;
+        text-align: center; 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        >* {
+            width: fit-content;
+        }
+        .subtitle {
+            margin-bottom: 10px;
+        }
     }
     // background: url("../../../assets/images/backgroundImages/galaxy.png")!important,
 }

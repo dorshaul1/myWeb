@@ -20,8 +20,8 @@ export const WHeader = (props) => {
 
     return (
         <div className={"wHeader " + SType} style={styleToInject} >
-            <h1 onClick={(ev) => onSetElToEdit(ev, cmp)} name="title" contentEditable={isEditing} suppressContentEditableWarning={true} onBlur={(ev) => onSetValue(ev)} style={info.title.style}>{info.title.txt}</h1>
-            <h3 onClick={(ev) => onSetElToEdit(ev, cmp)} name="substitle" contentEditable={isEditing} suppressContentEditableWarning={true} onBlur={(ev) => onSetValue(ev)} style={info.substitle.style}>{info.substitle.txt}</h3>
+            <h1 className="title" onClick={(ev) => onSetElToEdit(ev, cmp)} name="title" contentEditable={isEditing} suppressContentEditableWarning={true} onBlur={(ev) => onSetValue(ev)} style={info.title.style}>{info.title.txt}</h1>
+            <h3 className="subtitle" onClick={(ev) => onSetElToEdit(ev, cmp)} name="substitle" contentEditable={isEditing} suppressContentEditableWarning={true} onBlur={(ev) => onSetValue(ev)} style={info.substitle.style}>{info.substitle.txt}</h3>
             {/* <a onClick={(ev) => onSetElToEdit(ev, cmp)} href={isEditing ? "" : `site/${siteId}/${info.button.link}`}><button name="button" contentEditable="true" suppressContentEditableWarning={true} onBlur={(ev) => onSetValue(ev)} style={info.button.style}>{info.button.label}</button></a> */}
             <button onClick={(ev) => onSetElToEdit(ev, cmp)} name="button" contentEditable="true" suppressContentEditableWarning={true} onBlur={(ev) => onSetValue(ev)} style={info.button.style}>{info.button.label}</button>
         </div>

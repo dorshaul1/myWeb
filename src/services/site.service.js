@@ -22,13 +22,21 @@ const cmpOptions = {
             "info": {
                 "title": {
                     "txt": "I'm a header!",
-                    "style": { "color": "white" },
+                    "style": {
+                        "color": "white",
+                        "backgroundColor": "transparent",
+                        "fontSize": "1rem",
+                        "letterSpacing": "1px",
+                        "textAlign": "center",
+                        "textDecoration": "none",
+                        "fontFamily": "sans-serif"
+                    },
                 },
                 "substitle": {
                     "txt": "I'm a subtitle",
-                    "style": { "color": "white", "margin": "0 0 20px 0" },
+                    "style": { "color": "white" },
                 },
-                "btn": { "label": "I'm a call to action", "link": "#wc03", "style": { "color": "white", "backgroundColor": "transparent", "padding": "10px", "borderRadius": "20px", "border": "2px solid white" } }
+                "button": { "label": "I'm a call to action", "link": "#wc03", "style": { "color": "white", "backgroundColor": "transparent", "padding": "10px", "borderRadius": "20px", "border": "2px solid white" } }
             },
             "style": {
                 "imgName": "galaxy",
@@ -562,5 +570,6 @@ async function updateEl(siteId, newEl) {
     const siteIdx = sites.findIndex(site => site._id === siteId)
     const cmpIdx = sites[siteIdx].cmps.findIndex(cmp => newEl.cmpId === cmp.id)
     // console.log('sites[siteIdx].cmps[cmpIdx].info[newEl.elName]:', sites[siteIdx].cmps[cmpIdx].info[newEl.elName])
-    sites[siteIdx].cmps[cmpIdx].info[newEl.elName] = newEl.details 
+    sites[siteIdx].cmps[cmpIdx].info[newEl.elName] = newEl.details
+    return sites[siteIdx]
 }

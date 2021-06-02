@@ -82,8 +82,9 @@ export function setElement(cmpId, element = null, elName) {
 export function updateEl(siteId, newEl) {
   return async dispatch => {
     // console.log('element:', element)
-    // const elToEdit = element ? { cmpId, elName, ...element } : null
-    const newSite = await siteService.updateEl(siteId, newEl)
-    // dispatch({ type: 'SET_SITE', elToEdit })
+    // const elToEdit = element ? { cmpId, elName, ...element } : null  
+    const site = await siteService.updateEl(siteId, newEl)
+    console.log('updated site:', site)
+    dispatch({ type: 'SET_SITE', site })
   }
 }
